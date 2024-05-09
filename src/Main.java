@@ -1,15 +1,26 @@
+import java.util.ArrayList;
+
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args) {
-        //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-        // to see how IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
+        //ArrayList     =       a resizable array
+        //                      Elements can be added and removed after compilation phase
+        //                      store reference data types
 
-        for (int i = 1; i <= 5; i++) {
-            //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-            // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-            System.out.println("i = " + i);
+
+        ArrayList<String> food = new ArrayList<String>();
+        food.add("pizza");
+        food.add("hamburger");
+        food.add("hotdog");
+//        food.clear();
+
+        food.set(0, "sushi");
+        food.remove(2);
+
+        for (int i = 0; i<food.size(); i++) {
+            System.out.println(food.get(i));
         }
+
     }
 }
